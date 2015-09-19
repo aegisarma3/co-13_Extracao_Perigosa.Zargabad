@@ -1,0 +1,64 @@
+#include "Zen_FrameworkFunctions\Zen_DialogSystem\Zen_Dialog.hpp"
+#include "aegis_ACE_settings.hpp"
+
+
+
+class CfgNotifications {
+    #include "Zen_FrameworkFunctions\Zen_TaskSystem\Zen_TaskNotifications.hpp"
+};
+class CfgCommunicationMenu {
+    #include "Zen_FrameworkFunctions\Zen_FireSupportSystem\Zen_FireSupportMenu.hpp"
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Missão Cumprida";
+		subtitle = "Extração executada";
+		description = "AEGIS conseguiu executar a extração do VIP no aeroporto de Zargabad";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+  class loser
+  {
+		title = "Missão Falhou";
+		subtitle = "Todo o grupo AEGIS morreu";
+		description = "Mesmo retornando fogo e lutando bravamente, o grupo AEGIS pereceu em campo de batalha.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.6,0.1,0.2,1};
+	};
+
+  class vip_kill
+  {
+    title = "Missão Falhou";
+    subtitle = "O VIP foi morto na tentativa de extração";
+    description = "João dos Santos foi morto enquanto tentava deixar Zargabad. Essa notícia atinge em cheio os cofres do AEGIS.";
+    pictureBackground = "";
+    picture = "KIA";
+    pictureColor[] = {0.6,0.1,0.2,1};
+  };
+
+
+};
+
+respawn = 4;
+enableDebugConsole = 1;
+
+author = "Toaster[AEGIS]";
+onLoadName = "Extração Perigosa";
+onLoadMission = "“As desventuras que mais atingem os homens são aquelas que são escolhidas por eles.” - Sófocles";
+loadScreen = "images\intro.jpg";
+overviewPicture = "images\intro.jpg";
+overviewText = "“As desventuras que mais atingem os homens são aquelas que são escolhidas por eles.” - Sófocles";
+
+
+
+class Header {
+    gameType = COOP;
+    minPlayers = 1;
+    maxPlayers = 13;
+};

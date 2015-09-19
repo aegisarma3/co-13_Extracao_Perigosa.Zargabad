@@ -1,0 +1,499 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"addon",
+		"aia_zargabad_config",
+		"dac_source",
+		"3DEN",
+		"a3_modules_f_curator_curator",
+		"A3_Modules_F",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Supplies_F_Heli_CargoNets",
+		"RHS_US_A2_AirImport",
+		"A3_Soft_F_Offroad_01"
+	};
+	addOnsAuto[]=
+	{
+		"addon",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"dac_source",
+		"3DEN",
+		"a3_modules_f_curator_curator",
+		"A3_Modules_F",
+		"A3_Soft_F_Offroad_01",
+		"A3_Supplies_F_Heli_CargoNets",
+		"RHS_US_A2_AirImport",
+		"aia_zargabad_config"
+	};
+	randomSeed=12554081;
+	class Intel
+	{
+		briefingName="Extração Perigosa";
+		overviewText="Uma negociação com insurgentes deu errado e o grupo AEGIS é chamado para executar uma perigosa extração";
+		resistanceWest=0;
+		startWeather=0.84999996;
+		startWind=0;
+		forecastWeather=0.84999996;
+		forecastWind=0;
+		forecastWaves=0;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=2015;
+		month=9;
+		day=19;
+		hour=14;
+		minute=40;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=5;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=12;
+				class Item0
+				{
+					position[]={4833.708,37.889652,4577.2739};
+					id=0;
+					side="WEST";
+					vehicle="AEGIS_Operador";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="s1";
+					description="Team Leader";
+				};
+				class Item1
+				{
+					position[]={4832.4336,37.945652,4575.0435};
+					id=1;
+					side="WEST";
+					vehicle="AEGIS_Operador";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s2";
+					description="Operador";
+				};
+				class Item2
+				{
+					position[]={4833.708,37.923107,4575.0435};
+					id=2;
+					side="WEST";
+					vehicle="AEGIS_Operador";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s3";
+					description="Operador";
+				};
+				class Item3
+				{
+					position[]={4834.8555,37.889168,4575.0112};
+					id=3;
+					side="WEST";
+					vehicle="AEGIS_Operador";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s4";
+					description="Operador";
+				};
+				class Item4
+				{
+					position[]={4835.1104,37.903976,4573.5142};
+					id=4;
+					side="WEST";
+					vehicle="B_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s8";
+					description="Operador [Eng]";
+				};
+				class Item5
+				{
+					position[]={4833.9316,37.922714,4573.5142};
+					id=5;
+					side="WEST";
+					vehicle="B_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s7";
+					description="Operador [Eng]";
+				};
+				class Item6
+				{
+					position[]={4832.8477,37.922714,4573.5142};
+					id=6;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s6";
+					description="Operador [Médico]";
+				};
+				class Item7
+				{
+					position[]={4831.7646,37.922127,4573.5142};
+					id=7;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s5";
+					description="Operador [Médico]";
+				};
+				class Item8
+				{
+					position[]={4831.4141,37.913277,4571.6978};
+					id=8;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s9";
+					description="Operador [EOD]";
+				};
+				class Item9
+				{
+					position[]={4832.5928,37.898808,4571.7612};
+					id=9;
+					side="WEST";
+					vehicle="AEGIS_Operador";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s10";
+					description="Operador";
+				};
+				class Item10
+				{
+					position[]={4833.6445,37.899124,4571.8247};
+					id=10;
+					side="WEST";
+					vehicle="AEGIS_Operador";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s11";
+					description="Operador";
+				};
+				class Item11
+				{
+					position[]={4835.1421,37.899284,4571.8569};
+					id=11;
+					side="WEST";
+					vehicle="AEGIS_Operador";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s12";
+					description="Operador";
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4810.8271,37.784744,4612.6919};
+					id=12;
+					side="LOGIC";
+					vehicle="DAC_Source_Extern";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item2
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4829.5498,37.947063,4585.3745};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="#adminLogged";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="2";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=13;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item3
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4784.4189,30.547382,4610.7788};
+					id=14;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="DAC_Support_Logic";
+				};
+			};
+		};
+		class Item4
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4231.5313,17,4138.252};
+					id=15;
+					side="WEST";
+					vehicle="AEGIS_Operador";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="vip_01";
+					init="comment ""Exported from Arsenal by Toaster"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_SUITS_BLK_F"";  this addItemToUniform ""rhsusf_mag_17Rnd_9x19_FMJ"";  this addGoggles ""G_Aviator"";    comment ""Add weapons"";  this addWeapon ""rhsusf_weap_glock17g4"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""WhiteHead_14"";  this setSpeaker ""Male01ENGB"";";
+					description="VIP";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=6;
+		class Item0
+		{
+			position[]={4841.312,37.688721,4579.7026};
+			azimut=315.047;
+			id=16;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+			description="Operador";
+		};
+		class Item1
+		{
+			position[]={4847.0693,37.984428,4573.2803};
+			azimut=329.19901;
+			id=17;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+			description="Operador";
+		};
+		class Item2
+		{
+			position[]={4833.8569,37.881973,4582.3589};
+			azimut=631.948;
+			id=18;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+			description="Operador";
+		};
+		class Item3
+		{
+			position[]={4825.5903,37.998074,4580.5142};
+			azimut=603.88702;
+			id=19;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+			description="Operador";
+		};
+		class Item4
+		{
+			position[]={4846.7515,37.711971,4597.9219};
+			id=20;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+			init="this allowDamage false; [""Preload""] call BIS_fnc_arsenal; this addaction [""<t color='#FF0000'>"" +""Abrir o Arsenal"",{[""Open"",true] call BIS_fnc_arsenal},nil,1,true,false,"""",""((_target distance _this <3))""];";
+			description="Operador";
+		};
+		class Item5
+		{
+			position[]={3519.2527,22.35,4158.7837};
+			azimut=326.983;
+			id=21;
+			side="EMPTY";
+			vehicle="RHS_C130J";
+			skill=0.60000002;
+			text="plane";
+			description="Operador";
+		};
+	};
+	class Markers
+	{
+		items=3;
+		class Item0
+		{
+			position[]={4240.0156,17,4157.7798};
+			name="vip";
+			text=" Localização VIP";
+			type="hd_objective";
+		};
+		class Item1
+		{
+			position[]={4844.8901,45.46574,4592.8271};
+			name="aegis";
+			text=" Ponto de partida";
+			type="hd_flag";
+		};
+		class Item2
+		{
+			position[]={3523.4485,22.35,4157.0063};
+			name="extracao";
+			text=" C130 - Extração";
+			type="hd_end";
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={4059.6228,16.520761,4103.3564};
+			a=500;
+			b=500;
+			rectangular=1;
+			activationBy="LOGIC";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Area de Zargabad";
+			name="z1";
+			expCond="time > 1";
+			expActiv="fun = [""z1"",[1,0,0],[(ceil (random 15)+10),3,20,6],[(ceil (random 5)+5),2,30,5],[],[4,5,50,0,100,10],[2,2,2,9,1]] spawn DAC_Zone";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"aia_zargabad_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_zargabad_config"
+	};
+	randomSeed=16122389;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.25;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2009;
+		day=29;
+		hour=11;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"aia_zargabad_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_zargabad_config"
+	};
+	randomSeed=3609184;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.25;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2009;
+		day=29;
+		hour=11;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"aia_zargabad_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_zargabad_config"
+	};
+	randomSeed=1164885;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.25;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2009;
+		day=29;
+		hour=11;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};

@@ -150,7 +150,7 @@ switch (_CampTyp) do
 	{
 		_campBasic     = ["FlagPole_F",["Land_BarrelEmpty_F",8,5,0],["Land_BagBunker_Large_F",5,0,0],["Logic",10,15,0],0];
 		_campAmmo      = [];
-		_campStatic    = [["I_Mortar_01_F",-7,15,0,"LOP_ISTS_Infantry_Engineer"],["LOP_ISTS_Static_M2",15,15,0,"LOP_ISTS_Infantry_Engineer"],["I_Mortar_01_F",15,-10,180,"LOP_ISTS_Infantry_Engineer"],["LOP_ISTS_Static_M2",-7,-10,180,"LOP_ISTS_Infantry_Engineer"]];
+		_campStatic    = [["I_Mortar_01_F",-7,15,0,"CAF_AG_ME_T_AK47"],["O_HMG_01_F",15,15,0,"CAF_AG_ME_T_AK47"],["I_Mortar_01_F",15,-10,180,"CAF_AG_ME_T_AK47"],["O_HMG_01_F",-7,-10,180,"CAF_AG_ME_T_AK47"]];
 		_campAddUnit   = [];
 		_campUserObj   = [["Land_LampShabby_F",8,-5,0]];
 		_campRandomObj = [];

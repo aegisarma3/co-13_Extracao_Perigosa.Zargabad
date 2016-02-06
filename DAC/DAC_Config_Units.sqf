@@ -14,481 +14,875 @@ _TypNumber = _this select 0;_TempArray = [];
 switch (_TypNumber) do
 {
 //-------------------------------------------------------------------------------------------------
-// LOP configs added by Don [6.Rus] 	(DonElSarjo)
+// OPFOR 		CSAT				OPF_F
+  case 0:
+  {
+    _Unit_Pool_S = [
+		//Vehicle crewman, Pilot, Group Leader
+		"O_crew_F","O_Helipilot_F","O_Soldier_TL_F",
+		//Rifleman
+		"O_Soldier_F",
+		//Rifleman lite
+		"O_Soldier_lite_F",
+		//Grenadier
+		"O_Soldier_GL_F",
+		//Autorifleman
+		"O_Soldier_AR_F",
+		//Assistant Autorifleman
+		"O_Soldier_AAR_F",
+		//Ammobearer
+		"O_Soldier_A_F",
+		//Rifleman AT
+		"O_Soldier_LAT_F",
+		//AT Specialist
+		"O_Soldier_AT_F",
+		//Assistant AT
+		"O_Soldier_AAT_F",
+		//AA Specialist
+		"O_Soldier_AA_F",
+		//Assistant AA
+		"O_Soldier_AAA_F",
+		//Explosives Specialist
+		"O_soldier_exp_F",
+		//Engineer
+		"O_engineer_F",
+		//Repair Specialist
+		"O_soldier_repair_F",
+		//Medic
+		"O_medic_F",
+		//Marksman
+		"O_soldier_M_F",
+		//Spotter
+		"O_spotter_F",
+		//Sniper
+		"O_sniper_F"
+	];
+    _Unit_Pool_V = [
+		//Quadbike
+		"O_Quadbike_01_F",
+		//Ifrit MRAP
+		"O_MRAP_02_F",
+		//Ifrit MRAP GMG
+		"O_MRAP_02_gmg_F",
+		//Ifrit MRAP HMG
+		"O_MRAP_02_hmg_F",
+		//Kamaz Truck covered
+		"O_Truck_02_covered_F",
+		//Kamaz Truck dump
+		"O_Truck_02_transport_F",
+		//Kamaz Ammo
+		"O_Truck_02_Ammo_F",
+		//Kamaz Repair
+		"O_Truck_02_box_F",
+		//Kamaz Fuel
+		"O_Truck_02_fuel_F",
+		//Kamaz Medical
+		"O_Truck_02_medical_F"
+	];
+    _Unit_Pool_T = [
+		//MSE-3 Marid APC
+		"O_APC_Wheeled_02_rcws_F",
+		//ZSU-99 Tigris
+		"O_APC_Tracked_02_AA_F",
+		//BTR-K Kamysh
+		"O_APC_Tracked_02_cannon_F",
+		//2S9 Sochor
+		"O_MBT_02_arty_F",
+		//T-100 Varsuk
+		"O_MBT_02_cannon_F"
+	];
+    _Unit_Pool_A = [
+		//Mi48 Attack Red
+		"O_Heli_Attack_02_F",
+		//Mi48 Atttack Black
+		"O_Heli_Attack_02_black_F",
+		//ORCA Transport armed
+		"O_Heli_Light_02_F",
+		//ORCA Transport Black unarmed
+		"O_Heli_Light_02_unarmed_F"
+	];
+  };
 //-------------------------------------------------------------------------------------------------
-// Afghan Militia (Leight's Opfor Pack) - INDEPENDENT
-case 0:
-{
-_Unit_Pool_S = [
-	"LOP_AM_Infantry_Engineer",
-	"LOP_AM_Infantry_Engineer", // double engineer since there is no helis
-	"LOP_AM_Infantry_TL",
-	"LOP_AM_Infantry_AT",
-	"LOP_AM_Infantry_AR",
-	"LOP_AM_Infantry_Corpsman",
-	"LOP_AM_Infantry_GL",
-	"LOP_AM_Infantry_Marksman",
-	"LOP_AM_Soldier",
-	"LOP_AM_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_AM_Landrover",
-	"LOP_AM_Landrover_M2",
-	"LOP_AM_Offroad",
-	"LOP_AM_Offroad_M2",
-	"LOP_AM_Truck"
-];
-_Unit_Pool_T = [
-	"LOP_AM_BTR60",
-	"LOP_AM_M113_W",
-	"LOP_AM_T72BA"
-];
-_Unit_Pool_A = [];
-};
+// BLUFOR 		NATO					BLU_F
+  case 1:
+  {
+    _Unit_Pool_S = [
+		//Vehicle crewman, Pilot, Group Leader
+		"B_crew_F","B_Helipilot_F","B_Soldier_TL_F",
+		//Rifleman
+		"B_Soldier_F",
+		//Rifleman lite
+		"B_Soldier_lite_F",
+		//Grenadier
+		"B_Soldier_GL_F",
+		//Autorifleman
+		"B_Soldier_AR_F",
+		//Assistant Autorifleman
+		"B_Soldier_AAR_F",
+		//Ammobearer
+		"B_Soldier_A_F",
+		//Rifleman AT
+		"B_Soldier_LAT_F",
+		//AT Specialist
+		"B_Soldier_AT_F",
+		//Assistant AT
+		"B_Soldier_AAT_F",
+		//AA Specialist
+		"B_Soldier_AA_F",
+		//Assistant AA
+		"B_Soldier_AAA_F",
+		//Explosives Specialist
+		"B_soldier_exp_F",
+		//Engineer
+		"B_engineer_F",
+		//Repair Specialist
+		"B_soldier_repair_F",
+		//Medic
+		"B_medic_F",
+		//Marksman
+		"B_soldier_M_F",
+		//Spotter
+		"B_spotter_F",
+		//Sniper
+		"B_sniper_F"
+	];
+    _Unit_Pool_V = [
+		//Quadbike
+		"B_Quadbike_01_F",
+		//Hunter MRAP
+		"B_MRAP_01_F",
+		//Hunter MRAP HMG
+		"B_MRAP_01_hmg_F",
+		//Hunter MRAP GL
+		"B_MRAP_01_gmg_F",
+		//HEMTT Transport covered
+		"B_Truck_01_covered_F",
+		//HEMTT Truck open
+		"B_Truck_01_transport_F",
+		//HEMTT Ammo
+		"B_Truck_01_ammo_F",
+		//HEMTT Repair
+		"B_Truck_01_Repair_F",
+		//HEMTT Fuel
+		"B_Truck_01_fuel_F",
+		//HEMTT Medical
+		"B_Truck_01_medical_F"
+	];
+    _Unit_Pool_T = [
+		//AMV-7 Marshall APC
+		"B_APC_Wheeled_01_cannon_F",
+		//IFV-6a Cheetah
+		"B_APC_Tracked_01_AA_F",
+		//IFV-6c Panther
+		"B_APC_Tracked_01_rcws_F",
+		//M4 Scorcher
+		"B_MBT_01_arty_F",
+		//M2A1 Slammer
+		"B_MBT_01_cannon_F",
+		//M2A1 Slammer UP
+		"B_MBT_01_TUSK_F",
+		//M5 Sandstorm MLRS
+		"B_MBT_01_mlrs_F"
+	];
+    _Unit_Pool_A = [
+		//AH9
+		"B_Heli_Light_01_armed_F",
+		//MH9
+		"B_Heli_Light_01_F",
+		//AH99
+		"B_Heli_Attack_01_F",
+		//Ghosthawk
+		"B_Heli_Transport_01_F"
+	];
+  };
 //-------------------------------------------------------------------------------------------------
-// African Militia (Leight's Opfor Pack) - INDEPENDENT
-case 1:
-{
-_Unit_Pool_S = [
-	"LOP_AFR_Driver",
-	"LOP_AFR_Driver",	// same, no heli
-	"LOP_AFR_Infantry_TL",
-	"LOP_AFR_Infantry_AT",
-	"LOP_AFR_Infantry_Corpsman",
-	"LOP_AFR_Infantry_GL",
-	"LOP_AFR_Infantry_IED",
-	"LOP_AFR_Infantry_AR",
-	"LOP_AFR_Infantry_Marksman",
-	"LOP_AFR_Infantry",
-	"LOP_AFR_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_AFR_Landrover",
-	"LOP_AFR_Landrover_M2",
-	"LOP_AFR_Offroad",
-	"LOP_AFR_Offroad_M2",
-	"LOP_AFR_Truck"
-];
-_Unit_Pool_T = [
-	"LOP_AFR_BTR60",
-	"LOP_AFR_M113_W",
-	"LOP_AFR_T72BA"
-];
-_Unit_Pool_A = [];
-};
+// INDEPENDENT 		AAF				IND_F
+  case 2:
+  {
+    _Unit_Pool_S = [
+		//Vehicle crewman, Pilot, Group Leader
+		"I_crew_F","I_Helipilot_F","I_Soldier_TL_F",
+		//Rifleman
+		"I_Soldier_F",
+		//Rifleman lite
+		"I_Soldier_lite_F",
+		//Grenadier
+		"I_Soldier_GL_F",
+		//Autorifleman
+		"I_Soldier_AR_F",
+		//Assistant Autorifleman
+		"I_Soldier_AAR_F",
+		//Ammobearer
+		"I_Soldier_A_F",
+		//Rifleman AT
+		"I_Soldier_LAT_F",
+		//AT Specialist
+		"I_Soldier_AT_F",
+		//Assistant AT
+		"I_Soldier_AAT_F",
+		//AA Specialist
+		"I_Soldier_AA_F",
+		//Assistant AA
+		"I_Soldier_AAA_F",
+		//Explosives Specialist
+		"I_soldier_exp_F",
+		//Engineer
+		"I_engineer_F",
+		//Repair Specialist
+		"I_soldier_repair_F",
+		//Medic
+		"I_medic_F",
+		//Marksman
+		"I_soldier_M_F",
+		//Spotter
+		"I_spotter_F",
+		//Sniper
+		"I_sniper_F"
+	];
+    _Unit_Pool_V = [
+		//Quadbike
+		"I_Quadbike_01_F",
+		//Strider
+		"I_MRAP_03_F",
+		//Strider GMG
+		"I_MRAP_03_gmg_F",
+		//Strider HMG
+		"I_MRAP_03_hmg_F",
+		//Kamaz Truck covered
+		"I_Truck_02_covered_F",
+		//Zamak Truck
+		"I_Truck_02_transport_F",
+		//Zamak Ammo
+		"I_Truck_02_ammo_F",
+		//Zamak Repair
+		"I_Truck_02_box_F",
+		//Zamak Fuel
+		"I_Truck_02_fuel_F",
+		//Zamak Medical
+		"I_Truck_02_medical_F"
+	];
+    _Unit_Pool_T = [
+		//AFV-4 Gorgon
+		"I_APC_Wheeled_03_cannon_F",
+		//FV-720 Mora
+		"I_APC_tracked_03_cannon_F",
+		//MBT-52 Kuma
+		"I_MBT_03_cannon_F"
+	];
+    _Unit_Pool_A = [
+		//WY-55 Hellcat
+		"I_Heli_light_03_F",
+		//WY-55 Hellcat (green)
+		"I_Heli_light_03_unarmed_F",
+		//CH-49 Mohawk
+		"ch49ind"
+	];
+  };
 //-------------------------------------------------------------------------------------------------
-// ISTS (Leight's Opfor Pack) - INDEPENDENT
-case 2:
-{
-_Unit_Pool_S = [
-	"LOP_ISTS_Infantry_Engineer",
-	"LOP_ISTS_Infantry_Engineer", // no heli
-	"LOP_ISTS_Infantry_TL",
-	"LOP_ISTS_Infantry_AT",
-	"LOP_ISTS_Infantry_AR",
-	"LOP_ISTS_Infantry_Corpsman",
-	"LOP_ISTS_Infantry_GL",
-	"LOP_ISTS_Infantry_Marksman",
-	"LOP_ISTS_Soldier",
-	"LOP_ISTS_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_ISTS_Landrover",
-	"LOP_ISTS_Landrover_M2",
-	"LOP_ISTS_Truck"
-];
-_Unit_Pool_T = [
-	"LOP_ISTS_BTR60",
-	"LOP_ISTS_M113_W",
-	"LOP_ISTS_T72BA"
-];
-_Unit_Pool_A = [];
-};
+// Civilians				CIV_F
+  case 3:
+  {
+    _Unit_Pool_S = [
+		"C_man_w_worker_F","C_man_pilot_F","C_man_1",
+		"C_man_polo_1_F",
+		"C_man_polo_2_F",
+		"C_man_polo_3_F",
+		"C_man_polo_4_F",
+		"C_man_polo_5_F",
+		"C_man_polo_6_F",
+		"C_man_1_1_F",
+		"C_man_1_2_F",
+		"C_man_1_3_F",
+		"C_man_shorts_1_F",
+		"C_man_shorts_2_F",
+		"C_man_shorts_3_F",
+		"C_man_p_shorts_1_F",
+		"C_man_hunter_1_F",
+		"C_man_p_beggar_F",
+		"C_man_p_fugitive_F"
+	];
+    _Unit_Pool_V = [
+		"C_Van_01_box_F",
+		"C_Van_01_transport_F",
+		"C_Hatchback_01_sport_F",
+		"C_Hatchback_01_F",
+		"C_Quadbike_01_F",
+		"C_Offroad_01_F"
+	];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = [];
+  };
 //-------------------------------------------------------------------------------------------------
-// RACS (Leight's Opfor Pack) - INDEPENDENT
-case 3:
-{
-_Unit_Pool_S = [
-	"LOP_RACS_Infantry_Crewman",
-	"LOP_RACS_Infantry_Pilot",
-	"LOP_RACS_Infantry_TL",
-	"LOP_RACS_Infantry_AT",
-	"LOP_RACS_Infantry_AT_Asst",
-	"LOP_RACS_Infantry_Corpsman",
-	"LOP_RACS_Infantry_Engineer",
-	"LOP_RACS_Infantry_GL",
-	"LOP_RACS_Infantry_MG",
-	"LOP_RACS_Infantry_MG_Asst",
-	"LOP_RACS_Infantry_Marksman",
-	"LOP_RACS_Infantry_Rifleman",
-	"LOP_RACS_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_RACS_Landrover",
-	"LOP_RACS_Landrover_M2",
-	"LOP_RACS_Offroad",
-	"LOP_RACS_Offroad_M2",
-	"LOP_RACS_Truck"
-];
-_Unit_Pool_T = [
-	"LOP_RACS_M113_W",
-	"LOP_RACS_T72BA"
-];
-_Unit_Pool_A = [
-	"LOP_RACS_MH9_armed",
-	"LOP_RACS_MH9",
-	"LOP_RACS_UH60M"
-];
-};
+// OPFOR 		CSAT (Recon)			OPF_F
+  case 4:
+  {
+    _Unit_Pool_S = [
+		//Vehicle crewman, Pilot, Group Leader
+		"O_crew_F","O_Helipilot_F","O_recon_TL_F",
+		//Recon Scout
+		"O_recon_F",
+		//Recon Scout AT
+		"O_recon_LAT_F",
+		//Recon JTAC
+		"O_recon_JTAC_F",
+		//Rifleman AT
+		"O_Soldier_LAT_F",
+		//Explosives Specialist
+		"O_recon_exp_F",
+		//Recon Medic
+		"O_recon_medic_F",
+		//Recon Marksman
+		"O_recon_M_F"
+	];
+    _Unit_Pool_V = [
+		//Quadbike
+		"O_Quadbike_F",
+		//Ifrit
+		"O_MRAP_02_F"
+	];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = [
+		//ORCA Transport armed
+		"O_Heli_Light_02_F",
+		//ORCA Transport Black unarmed
+		"O_Heli_Light_02_unarmed_F"
+	];
+  };
+ //-------------------------------------------------------------------------------------------------
+ // BLUFOR			NATO (Recon)				BLU_F
+  case 5:
+  {
+    _Unit_Pool_S = [
+		//Vehicle crewman, Pilot, Group Leader
+		"B_crew_F","B_Helipilot_F","B_recon_TL_F",
+		//Recon Scout
+		"B_recon_F",
+		//Recon Scout AT
+		"B_recon_LAT_F",
+		//Recon JTAC
+		"B_recon_JTAC_F",
+		//Rifleman AT
+		"B_Soldier_LAT_F",
+		//Explosives Specialist
+		"B_recon_exp_F",
+		//Recon Medic
+		"B_recon_medic_F",
+		//Recon Marksman
+		"B_recon_M_F"
+	];
+    _Unit_Pool_V = [
+		//Quadbike
+		"B_Quadbike_F",
+		//Ifrit
+		"B_MRAP_02_F"
+	];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = [
+		//AH9
+		"B_Heli_Light_01_armed_F",
+		//MH9
+		"B_Heli_Light_01_F"
+	];
+  };
 //-------------------------------------------------------------------------------------------------
-// Iraqi Army (Leight's Opfor Pack) - BLUFOR // no support units
-case 4:
-{
-_Unit_Pool_S = [
-	"LOP_IA_Infantry_Crewman",
-	"LOP_IA_Infantry_Crewman", 	//no heli
-	"LOP_IA_Infantry_TL",
-	"LOP_IA_Infantry_AT",
-	"LOP_IA_Infantry_AT_Asst",
-	"LOP_IA_Infantry_Corpsman",
-	"LOP_IA_Infantry_Engineer",
-	"LOP_IA_Infantry_GL",
-	"LOP_IA_Infantry_MG",
-	"LOP_IA_Infantry_MG_Asst",
-	"LOP_IA_Infantry_Marksman",
-	"LOP_IA_Infantry_Rifleman",
-	"LOP_IA_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_IA_BM21",
-	"LOP_IA_HEMTT_Mover_D",
-	"LOP_IA_HEMTT_Box_D",
-	"LOP_IA_HEMTT_Transport_D",
-	"LOP_IA_HEMTT_Covered_D",
-	"LOP_IA_M1025_W_M2",
-	"LOP_IA_M1025_W_Mk19",
-	"LOP_IA_M1025_D",
-	"LOP_IA_M998_D_4DR",
-	"LOP_IA_Offroad",
-	"LOP_IA_Offroad_M2",
-	"LOP_IA_Truck"
-];
-_Unit_Pool_T = [
-	"LOP_IA_BMP1",
-	"LOP_IA_BMP2",
-	"LOP_IA_M113_W",
-	"LOP_IA_M1A1_AIM_D",
-	"LOP_IA_ZSU234"
-];
-_Unit_Pool_A = [];
-};
+// OPFOR			Rebels Red				OPF_G_F
+  case 6:
+  {
+    _Unit_Pool_S = [
+		"O_G_Soldier_F","O_G_Soldier_F","O_G_Soldier_SL_F",
+		"O_G_Soldier_AR_F",
+		"O_G_Soldier_LAT_F",
+		"O_G_Soldier_A_F",
+		"O_G_medic_F",
+		"O_G_Soldier_F",
+		"O_G_Soldier_GL_F",
+		"O_G_Soldier_M_F",
+		"O_G_engineer_F"
+	];
+    _Unit_Pool_V = [
+		"O_G_Offroad_01_F",
+		"O_G_Offroad_01_armed_F"
+	];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = [];
+  };
 //-------------------------------------------------------------------------------------------------
-// Chernarus Defence Force (Leight's Opfor Pack) - BLUFOR // no support units
-case 5:
-{
-_Unit_Pool_S = [
-	"LOP_CDF_Infantry_Crewman",
-	"LOP_CDF_Infantry_Pilot",
-	"LOP_CDF_Infantry_TL",
-	"LOP_CDF_Infantry_AA",
-	"LOP_CDF_Infantry_AA",
-	"LOP_CDF_Infantry_AT_Asst",
-	"LOP_CDF_Infantry_Corpsman",
-	"LOP_CDF_Infantry_Engineer",
-	"LOP_CDF_Infantry_GL",
-	"LOP_CDF_Infantry_MG",
-	"LOP_CDF_Infantry_MG_Asst",
-	"LOP_CDF_Infantry_Marksman",
-	"LOP_CDF_Infantry_Officer",
-	"LOP_CDF_Infantry_Rifleman",
-	"LOP_CDF_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_CDF_BM21",
-	"LOP_CDF_KAMAZ_Transport",
-	"LOP_CDF_KAMAZ_Covered",
-	"LOP_CDF_UAZ" ,
-	"LOP_CDF_UAZ_Open",
-	"LOP_CDF_Ural",
-	"LOP_CDF_Ural_open"
-];
-_Unit_Pool_T = [
-	"LOP_CDF_BMD1",
-	"LOP_CDF_BMD2",
-	"LOP_CDF_BMP1",
-	"LOP_CDF_BMP1D",
-	"LOP_CDF_BMP2",
-	"LOP_CDF_BMP2D",
-	"LOP_CDF_BTR60",
-	"LOP_CDF_BTR70",
-	"LOP_CDF_T72BA",
-	"LOP_CDF_T72BB",
-	"LOP_CDF_ZSU234"
-];
-_Unit_Pool_A = [
-	"LOP_CDF_Mi24V_AT",
-	"LOP_CDF_Mi24V_FAB",
-	"LOP_CDF_Mi24V_UPK23",
-	"LOP_CDF_Mi8MT_Cargo",
-	"LOP_CDF_Mi8MTV3_FAB",
-	"LOP_CDF_Mi8MTV3_UPK23"
-];
-};
+// BLUFOR		Rebels Blue				BLU_G_F
+  case 7:
+  {
+    _Unit_Pool_S = [
+		"B_G_Soldier_F","B_G_Soldier_F","B_G_Soldier_SL_F",
+		"B_G_Soldier_AR_F",
+		"B_G_Soldier_LAT_F",
+		"B_G_Soldier_A_F",
+		"B_G_medic_F",
+		"B_G_Soldier_F",
+		"B_G_Soldier_GL_F",
+		"B_G_Soldier_M_F",
+		"B_G_engineer_F"
+	];
+    _Unit_Pool_V = [
+		"B_G_Quadbike_01_F",
+		"B_G_Offroad_01_F",
+		"B_G_Offroad_01_armed_F",
+		"B_G_Van_01_transport_F"
+	];
+    _Unit_Pool_T = ["B_G_Van_01_fuel_F"];
+    _Unit_Pool_A = [];
+  };
 //-------------------------------------------------------------------------------------------------
-// Afghan Army (Leight's Opfor Pack) - BLUFOR
-case 6:
-{
-_Unit_Pool_S = [
-	"LOP_AA_Infantry_Crewman",
-	"LOP_AA_Infantry_Crewman",	//no heli
-	"LOP_AA_Infantry_TL",
-	"LOP_AA_Infantry_AT",
-	"LOP_AA_Infantry_AT_Asst",
-	"LOP_AA_Infantry_Corpsman",
-	"LOP_AA_Infantry_Engineer",
-	"LOP_AA_Infantry_GL",
-	"LOP_AA_Infantry_MG",
-	"LOP_AA_Infantry_MG_Asst",
-	"LOP_AA_Infantry_Marksman",
-	"LOP_AA_Infantry_Rifleman",
-	"LOP_AA_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_AA_M1025_W_M2",
-	"LOP_AA_M1025_W_Mk19",
-	"LOP_AA_M1025_D",
-	"LOP_AA_M998_D_4DR",
-	"LOP_AA_Offroad",
-	"LOP_AA_Offroad_M2",
-	"LOP_AA_Truck"
-];
-_Unit_Pool_T = [
-	"LOP_AA_BMP1",
-	"LOP_AA_BMP2",
-	"LOP_AA_M113_W",
-	"LOP_AA_ZSU234"
-];
-_Unit_Pool_A = [];
-};
+// INDFOR		Rebels Green				IND_G_F
+  case 8:
+  {
+    _Unit_Pool_S = [
+		"I_G_Soldier_F","I_G_Soldier_F","I_G_Soldier_SL_F",
+		"I_G_Soldier_AR_F",
+		"I_G_Soldier_LAT_F",
+		"I_G_Soldier_A_F",
+		"I_G_medic_F",
+		"I_G_Soldier_F",
+		"I_G_Soldier_GL_F",
+		"I_G_Soldier_M_F",
+		"I_G_engineer_F"
+	];
+    _Unit_Pool_V = [
+		"I_G_Offroad_01_F",
+		"I_G_Offroad_01_armed_F"
+	];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = [];
+  };
 //-------------------------------------------------------------------------------------------------
-// Afghan Police (Leight's Opfor Pack) - BLUFOR
-case 7:
-{
-_Unit_Pool_S = [
-	"LOP_AA_Police_Rifleman",
-	"LOP_AA_Police_Rifleman",	//no heli
-	"LOP_AA_Police_TL",
-	"LOP_AA_Police_Corpsman",
-	"LOP_AA_Police_MG",
-	"LOP_AA_Police_Rifleman",
-	"LOP_AA_Police_SL"
-];
-_Unit_Pool_V = [
-	"LOP_AA_Offroad_Police",
-	"LOP_AA_Offroad_M2_Police"
-];
-_Unit_Pool_T = [
-	"LOP_AA_Offroad_Police",
-	"LOP_AA_Offroad_M2_Police"
-];
-_Unit_Pool_A = [];
-};
+// OPFOR		CAF Aggressors Africans			caf_ag_afr_p
+  case 9:
+  {
+    _Unit_Pool_S = [
+		"CAF_AG_AFR_P_AK47","CAF_AG_AFR_P_AK47","CAF_AG_AFR_P_SVD",
+		"CAF_AG_AFR_P_AK47",
+		"CAF_AG_AFR_P_AK74",
+		"CAF_AG_AFR_P_GL",
+		"CAF_AG_AFR_P_PK",
+		"CAF_AG_AFR_P_RPK",
+		"CAF_AG_AFR_P_RPG"
+	];
+    _Unit_Pool_V = [
+		"CAF_AG_afr_p_Offroad",
+		"CAF_AG_afr_p_Offroad_armed_01",
+		"CAF_AG_afr_p_van_01"
+	];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = [];
+  };
 //-------------------------------------------------------------------------------------------------
-// ChDKZ (Leight's Opfor Pack) - OPFOR
-case 8:
-{
-_Unit_Pool_S = [
-	"LOP_ChDKZ_Infantry_Crewman",
-	"LOP_ChDKZ_Infantry_Pilot",
-	"LOP_ChDKZ_Infantry_TL",
-	"LOP_ChDKZ_Infantry_AT",
-	"LOP_ChDKZ_Infantry_Bardak",
-	"LOP_ChDKZ_Infantry_Commander",
-	"LOP_ChDKZ_Infantry_Corpsman",
-	"LOP_ChDKZ_Infantry_Engineer",
-	"LOP_ChDKZ_Infantry_GL",
-	"LOP_ChDKZ_Infantry_MG",
-	"LOP_ChDKZ_Infantry_Marksman",
-	"LOP_ChDKZ_Infantry_Rifleman",
-	"LOP_ChDKZ_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_ChDKZ_BM21",
-	"LOP_ChDKZ_UAZ",
-	"LOP_ChDKZ_UAZ_Open",
-	"LOP_ChDKZ_Ural",
-	"LOP_ChDKZ_Ural_open"
-];
-_Unit_Pool_T = [
-	"LOP_ChDKZ_BMP1",
-	"LOP_ChDKZ_BMP1D",
-	"LOP_ChDKZ_BMP2",
-	"LOP_ChDKZ_BMP2D",
-	"LOP_ChDKZ_BTR60",
-	"LOP_ChDKZ_BTR70",
-	"LOP_ChDKZ_T72BA",
-	"LOP_ChDKZ_T72BB",
-	"LOP_ChDKZ_ZSU234"
-];
-_Unit_Pool_A = [
-	"LOP_ChDKZ_Mi8MT_Cargo",
-	"LOP_ChDKZ_Mi8MTV3_FAB",
-	"LOP_ChDKZ_Mi8MTV3_UPK23"
-];
-};
+// OPFOR		CAF Aggressors Middle Eastern	caf_ag_me_t
+  case 10:
+  {
+    _Unit_Pool_S = [
+		"CAF_AG_ME_T_AK47","CAF_AG_ME_T_AK47","CAF_AG_ME_T_SVD",
+		"CAF_AG_ME_T_AK47",
+		"CAF_AG_ME_T_AK74",
+		"CAF_AG_ME_T_GL",
+		"CAF_AG_ME_T_PK",
+		"CAF_AG_ME_T_RPK",
+		"CAF_AG_ME_T_RPG"
+	];
+    _Unit_Pool_V = [
+		"CAF_AG_ME_T_Offroad",
+		"CAF_AG_ME_T_Offroad_armed_01",
+		"CAF_AG_ME_T_van_01"
+	];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = [];
+  };
 //-------------------------------------------------------------------------------------------------
-// SLA (Leight's Opfor Pack) - OPFOR
-case 9:
-{
-_Unit_Pool_S = [
-	"LOP_SLA_Infantry_Crewman",
-	"LOP_SLA_Infantry_Pilot",
-	"LOP_SLA_Infantry_TL",
-	"LOP_SLA_Infantry_AA",
-	"LOP_SLA_Infantry_AT",
-	"LOP_SLA_Infantry_AT_Asst",
-	"LOP_SLA_Infantry_Corpsman",
-	"LOP_SLA_Infantry_Engineer",
-	"LOP_SLA_Infantry_GL",
-	"LOP_SLA_Infantry_MG",
-	"LOP_SLA_Infantry_MG_Asst",
-	"LOP_SLA_Infantry_Marksman",
-	"LOP_SLA_Infantry_Officer",
-	"LOP_SLA_Infantry_Rifleman",
-	"LOP_SLA_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_SLA_BM21",
-	"LOP_SLA_UAZ",
-	"LOP_SLA_UAZ_Open",
-	"LOP_SLA_Ural",
-	"LOP_SLA_Ural_open"
-];
-_Unit_Pool_T = [
-	"LOP_SLA_BMP1",
-	"LOP_SLA_BMP1D",
-	"LOP_SLA_BMP2",
-	"LOP_SLA_BMP2D",
-	"LOP_SLA_BTR60",
-	"LOP_SLA_BTR70",
-	"LOP_SLA_T72BA",
-	"LOP_SLA_T72BB",
-	"LOP_SLA_ZSU234"
-];
-_Unit_Pool_A = [
-	"LOP_SLA_Mi8MT_Cargo",
-	"LOP_SLA_Mi8MTV3_FAB",
-	"LOP_SLA_Mi8MTV3_UPK23"
-];
-};
+// OPFOR		CAF Aggressors Europeans		caf_ag_eeur_r
+  case 11:
+  {
+    _Unit_Pool_S = [
+    "CAF_AG_EEUR_R_AK47",
+		"CAF_AG_EEUR_R_AK47",
+    "CAF_AG_EEUR_R_AK47",
+		"CAF_AG_EEUR_R_AK74",
+		"CAF_AG_EEUR_R_GL",
+		"CAF_AG_EEUR_R_PK",
+		"CAF_AG_EEUR_R_RPK",
+		"CAF_AG_EEUR_R_RPG",
+    "CAF_AG_EEUR_R_SVD"
+	];
+    _Unit_Pool_V = [
+		"CAF_AG_eeur_r_Offroad",
+		// "CAF_AG_eeur_r_Offroad_armed_01",
+		"O_G_Offroad_01_armed_F",
+		"CAF_AG_eeur_r_van_01"
+	];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = [];
+  };
 //-------------------------------------------------------------------------------------------------
-// Novorussian force (Leight's Opfor Pack) - OPFOR
-case 10:
-{
-_Unit_Pool_S = [
-	"LOP_US_Infantry_Crewman",
-	"LOP_US_Infantry_Crewman",	//no heli
-	"LOP_US_Infantry_TL",
-	"LOP_US_Infantry_AA",
-	"LOP_US_Infantry_AT",
-	"LOP_US_Infantry_AT_Asst",
-	"LOP_US_Infantry_Corpsman",
-	"LOP_US_Infantry_Engineer",
-	"LOP_US_Infantry_GL",
-	"LOP_US_Infantry_MG",
-	"LOP_US_Infantry_MG_Asst",
-	"LOP_US_Infantry_Marksman",
-	"LOP_US_Infantry_Officer",
-	"LOP_US_Infantry_Rifleman",
-	"LOP_US_Infantry_SL"
-];
-_Unit_Pool_V = [
-	"LOP_US_BM21",
-	"LOP_US_UAZ",
-	"LOP_US_UAZ_Open",
-	"LOP_US_Ural",
-	"LOP_US_Ural_open"
-];
-_Unit_Pool_T = [
-	"LOP_US_BMP1",
-	"LOP_US_BMP1D",
-	"LOP_US_BMP2",
-	"LOP_US_BMP2D",
-	"LOP_US_BTR60",
-	"LOP_US_BTR70",
-	"LOP_US_T72BA",
-	"LOP_US_T72BB",
-	"LOP_US_ZSU234"
-];
-_Unit_Pool_A = [];
-};
+// BLUFOR		CAF (WOODLAND)					CAF_TW
+  case 12:
+  {
+    _Unit_Pool_S = [
+		"CAF_CREWMAN_TW","RCAF_CH147_PILOT_OD","CAF_SECTIONIC_TW",
+		"CAF_SECTION2IC_TW",
+		"CAF_RIFLEMAN_TW",
+		"CAF_RIFLEMANAT_TW",
+		"CAF_GRENADIER_TW",
+		"CAF_C9GUNNER_TW",
+		"CAF_C6GUNNER_TW",
+		"CAF_GPMGASST_TW",
+		"CAF_84GUNNER_TW",
+		"CAF_ATASST_TW",
+		"CAF_MEDIC_TW",
+		"CAF_CBTENGINEER_TW",
+		"CAF_VEHTECH_TW",
+		"CAF_SNIPER_TW",
+		"CAF_SPOTTER_TW",
+		"CAF_RECCE_IC_TW",
+		"CAF_RECCE_2IC_TW",
+		"CAF_RECCE_C9_TW",
+		"CAF_RECCE_SIG_TW"
+	];
+    _Unit_Pool_V = [
+		"caf_HLVW_support",
+		"caf_HLVW_open",
+		"caf_HLVW_covered",
+		"CAF_Quadbike_OD",
+		"CAF_TAPV_tw",
+		"caf_tapv_50_tw",
+		"caf_tapv_gl_tw"
+	];
+    _Unit_Pool_T = [
+		"caf_lav3_isc",
+		"CAF_LeopardC2_TW"
+	];
+    _Unit_Pool_A = [
+		"CAF_CH146_F",
+		"CAF_CH146_GRIFFON_F",	//medevac
+		"CH_147F"
+	];
+  };
 //-------------------------------------------------------------------------------------------------
-// African civilians (Leight's Opfor Pack) - CIV
-case 11:
-{
-_Unit_Pool_S = [
-	"LOP_AFR_Civ_Man_01",
-	"LOP_AFR_Civ_Man_01_S",
-	"LOP_AFR_Civ_Man_02",
-	"LOP_AFR_Civ_Man_02_S",
-	"LOP_AFR_Civ_Man_03",
-	"LOP_AFR_Civ_Man_03_S",
-	"LOP_AFR_Civ_Man_04",
-	"LOP_AFR_Civ_Man_04_S",
-	"LOP_AFR_Civ_Man_05",
-	"LOP_AFR_Civ_Man_05_S",
-	"LOP_AFR_Civ_Man_06",
-	"LOP_AFR_Civ_Man_06_S"
-];
-_Unit_Pool_V = [
-	"LOP_AFR_Civ_Hatchback",
-	"LOP_AFR_Civ_Offroad",
-	"LOP_AFR_Civ_Landrover",
-	"LOP_AFR_Civ_UAZ",
-	"LOP_AFR_Civ_UAZ_Open",
-	"LOP_AFR_Civ_Ural",
-	"LOP_AFR_Civ_Ural_open"
-];
-_Unit_Pool_T = [
-	"LOP_AFR_Civ_Hatchback",
-	"LOP_AFR_Civ_Offroad",
-	"LOP_AFR_Civ_Landrover",
-	"LOP_AFR_Civ_UAZ",
-	"LOP_AFR_Civ_UAZ_Open",
-	"LOP_AFR_Civ_Ural",
-	"LOP_AFR_Civ_Ural_open"
-];
-_Unit_Pool_A = [];
-};
+// BLUFOR		CAF (ARID)						CAF_AR
+  case 13:
+  {
+    _Unit_Pool_S = [
+		"CAF_CREWMAN_AR","RCAF_CH147_PILOT_AR","CAF_SECTIONIC_AR",
+		"CAF_SECTION2IC_AR",
+		"CAF_RIFLEMAN_AR",
+		"CAF_RIFLEMANAT_AR",
+		"CAF_GRENADIER_AR",
+		"CAF_C9GUNNER_AR",
+		"CAF_C6GUNNER_AR",
+		"CAF_GPMGASST_AR",
+		"CAF_84GUNNER_AR",
+		"CAF_ATASST_AR",
+		"CAF_MEDIC_AR",
+		"CAF_CBTENGINEER_AR",
+		"CAF_VEHTECH_AR",
+		"CAF_SNIPER_AR",
+		"CAF_SPOTTER_AR",
+		"CAF_RECCE_IC_AR",
+		"CAF_RECCE_2IC_AR",
+		"CAF_RECCE_C9_AR",
+		"CAF_RECCE_SIG_AR"
+	];
+    _Unit_Pool_V = [
+		"caf_HLVW_support_ar",
+		"caf_HLVW_open_AR",
+		"caf_HLVW_covered_ar",
+		"CAF_Quadbike_AR",
+		"CAF_TAPV_ar",
+		"caf_tapv_50_ar",
+		"caf_tapv_gl_ar"
+	];
+    _Unit_Pool_T = [
+		"caf_lav3_isc_D",
+		"CAF_LeopardC2_AR"
+	];
+    _Unit_Pool_A = ["CAF_CH146_F_D"];
+  };
+ //-------------------------------------------------------------------------------------------------
+// BLUFOR		CAF JTF2						????
+  case 14:
+  {
+    _Unit_Pool_S = [
+		"JTF2_ASSAULTER","RCAF_CH146_PILOT_OD","JTF2_ASSAULTER_TL",
+		"JTF2_ASSAULTER_MG",
+		"JTF2_ASSAULTER_MED",
+		"JTF2_ASSAULTER_EXP",
+		"JTF2_ASSAULTER_MRK",
+		"JTF2_ASSAULTER"
+	];
+    _Unit_Pool_V = ["JTF2_Offroad_armed_01"];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = ["CAF_CH146_SF"];
+  };
+
 //-------------------------------------------------------------------------------------------------
-// Takistani civilians (Leight's Opfor Pack) - CIV
-case 12:
-{
-_Unit_Pool_S = [
-	"LOP_Tak_Civ_Man_01",
-	"LOP_Tak_Civ_Man_02",
-	"LOP_Tak_Civ_Man_04"
-];
-_Unit_Pool_V = [
-	"LOP_TAK_Civ_Hatchback",
-	"LOP_TAK_Civ_Offroad",
-	"LOP_TAK_Civ_Landrover",
-	"LOP_TAK_Civ_UAZ",
-	"LOP_TAK_Civ_UAZ_Open",
-	"LOP_TAK_Civ_Ural",
-	"LOP_TAK_Civ_Ural_open"
-];
-_Unit_Pool_T = [
-	"LOP_TAK_Civ_Hatchback",
-	"LOP_TAK_Civ_Offroad",
-	"LOP_TAK_Civ_Landrover",
-	"LOP_TAK_Civ_UAZ",
-	"LOP_TAK_Civ_UAZ_Open",
-	"LOP_TAK_Civ_Ural",
-	"LOP_TAK_Civ_Ural_open"
-];
-_Unit_Pool_A = [];
-};
+// OPFOR 	CSAT	 (Light Urban Assault Force)			OPF_F
+  case 15:
+  {
+   	_Unit_Pool_S = [
+		"O_crew_F", "O_Helipilot_F", "O_soldierU_SL_F",
+		"O_soldierU_TL_F",
+		"O_soldierU_TL_F",
+		"O_soldierU_medic_F",
+		"O_soldierU_medic_F",
+		"O_soldierU_AR_F",
+		"O_soldierU_AR_F",
+		"O_soldierU_F",
+		"O_soldierU_F",
+		"O_soldierU_F",
+		"O_soldierU_F",
+		"O_soldierU_LAT_F",
+		"O_soldierU_LAT_F",
+		"O_soldierU_AT_F",
+		"O_soldierU_AAR_F"
+	];
+	_Unit_Pool_V = [
+		"O_MRAP_02_F",
+		"O_MRAP_02_hmg_F"
+	];
+	_Unit_Pool_T = [
+		"O_APC_Tracked_02_cannon_F",
+		"O_APC_Wheeled_02_rcws_F"
+	];
+	_Unit_Pool_A = ["O_Heli_Light_02_F"];
+  };
+//-------------------------------------------------------------------------------------------------
+// OPFOR 	Takistani Army regulars 					@TKA_A3
+  case 16:
+   {
+    _Unit_Pool_S = [
+		"B_TKA_A3_Soldier_Crew", "B_TKA_A3_Soldier_Pilot", "B_TKA_A3_Soldier_SL",
+		"B_TKA_A3_Soldier_MG",
+		"B_TKA_A3_Soldier_AMG",
+		"B_TKA_A3_Soldier_AR",
+		"B_TKA_A3_Soldier_LAT",
+		"B_TKA_A3_Soldier_AT",
+		"B_TKA_A3_Soldier_AAT"
+	];
+    _Unit_Pool_V = [	// M113 and BTR60 are here, as they are 1 rocket dead, also added ural with AA gun.
+		"TKA_A3_M113",
+		"TKA_A3_UAZ_SPG9",
+		"TKA_A3_Ural_ZU23",
+		"TKA_A3_UAZ_MG",
+		"TKA_A3_BTR60"
+	];
+    _Unit_Pool_T = [	// No T-55, since with using RHS gear and vehicles T-55 is too OP (2 javelin rockets = no damage done)
+		"TKA_A3_BMP2",
+		"TKA_A3_T34",
+		"TKA_A3_T72"
+	];
+    _Unit_Pool_A = [	 // No Mi-24 since it might be too op in missions
+		"TKA_A3_Mi17",
+		"TKA_A3_Mi17_rockets"
+	];
+  };
+//-------------------------------------------------------------------------------------------------
+// Blufor		CDF					@CDF_A3 mixed with LOP CDF units
+  case 17:
+   {
+    _Unit_Pool_S = [
+		"B_CDF_A3_Soldier_Crew", "B_CDF_A3_Soldier_Pilot", "B_CDF_A3_Soldier_GL",
+		"B_CDF_A3_Soldier_MG",
+		"B_CDF_A3_Soldier_AR",
+		"B_CDF_A3_Soldier_Medic",
+		"B_CDF_A3_Soldier_RPG",
+		"LOP_CDF_Infantry_Marksman"
+	];
+    _Unit_Pool_V = [
+		"LOP_CDF_BTR60",
+		"CDF_A3_UAZ_MG",
+		"CDF_A3_UAZ_SPG9",
+		"CDF_A3_Ural_ZU23"
+	];
+    _Unit_Pool_T = [
+		"CDF_A3_BMP2",
+		"LOP_CDF_BMP1",
+		"CDF_A3_T72",
+		"LOP_CDF_T72BA",
+		"LOP_CDF_T72BB"
+	];
+    _Unit_Pool_A = [
+		"CDF_A3_Mi17_rockets",
+		"CDF_A3_Mi17"
+	];
+  };
+//-------------------------------------------------------------------------------------------------
+// Blufor			CDF					@CDF_A3 clean
+  case 18:
+   {
+    _Unit_Pool_S = [
+		"B_CDF_A3_Soldier_Crew", "B_CDF_A3_Soldier_Pilot", "B_CDF_A3_Soldier_GL",
+		"B_CDF_A3_Soldier_MG",
+		"B_CDF_A3_Soldier_AR",
+		"B_CDF_A3_Soldier_Medic",
+		"B_CDF_A3_Soldier_RPG"
+	];
+    _Unit_Pool_V = [
+		"CDF_A3_UAZ_MG",
+		"CDF_A3_UAZ_SPG9",
+		"CDF_A3_Ural_ZU23"
+	];
+    _Unit_Pool_T = [
+		"CDF_A3_BMP2",
+		"CDF_A3_T72"
+	];
+    _Unit_Pool_A = [
+		"CDF_A3_Mi17_rockets",
+		"CDF_A3_Mi17"
+	];
+  };
+//-------------------------------------------------------------------------------------------------
+// moved LOP units to it's own .sqf file
+//-------------------------------------------------------------------------------------------------
+// INDEPENDENT	Russians digital flora camo			@sud_russians
+  case 19:
+  {
+    _Unit_Pool_S = [
+		"SUD_RU_Soldier_Crew", "SUD_RU_Soldier_HPilot", "SUD_RU_Soldier_TL",
+		"SUD_RU_Soldier",
+		"SUD_RU_Soldier_P",
+		"SUD_RU_Soldier_AR",
+		"SUD_RU_Soldier_MG",
+		"SUD_RU_Soldier_GL",
+		"SUD_RU_Soldier_Marksman",
+		"SUD_RU_Soldier_Engineer",
+		"SUD_RU_Soldier_Sapper",
+		"SUD_RU_Soldier_Medic",
+		"SUD_RU_Soldier_AT",
+		"SUD_RU_Soldier_UAV"
+	];
+    _Unit_Pool_V = [
+		"SUD_Kamaz_transport",
+		"SUD_Kamaz_covered"
+	];
+    _Unit_Pool_T = [
+		"RU_MBT_02_cannon_F",
+		"RU_APC_BTR100_F",
+		"RU_APC_Tracked_02_cannon_F",
+		"RU_APC_Tracked_02_AA_F"
+	];
+    _Unit_Pool_A = [
+		"SUD_KA60_RU",
+		"SUD_MI48_RU"
+	];
+  };
+//-------------------------------------------------------------------------------------------------
+// INDEPENDENT	Russians SURPAT Camo					@sud_russians
+  case 20:
+  {
+    _Unit_Pool_S = [
+		"SUD_RU_Soldier_Crew_S", "SUD_RU_Soldier_HPilot", "SUD_RU_Soldier_TL_S",
+		"SUD_RU_Soldier_S",
+		"SUD_RU_Soldier_P_S",
+		"SUD_RU_Soldier_AR_S",
+		"SUD_RU_Soldier_MG_S",
+		"SUD_RU_Soldier_GL_S",
+		"SUD_RU_Soldier_Marksman_S",
+		"SUD_RU_Soldier_Engineer_S",
+		"SUD_RU_Soldier_Sapper_S",
+		"SUD_RU_Soldier_Medic_S",
+		"SUD_RU_Soldier_AT_S"
+	];
+    _Unit_Pool_V = [
+		"SUD_Kamaz_transport",
+		"SUD_Kamaz_covered"
+	];
+    _Unit_Pool_T = [
+		"RU_MBT_02_cannon_F",
+		"RU_APC_BTR100_F",
+		"RU_APC_Tracked_02_cannon_F",
+		"RU_APC_Tracked_02_AA_F"
+	];
+    _Unit_Pool_A = [
+		"SUD_KA60_RU",
+		"SUD_MI48_RU"
+	];
+  };
+//-------------------------------------------------------------------------------------------------
+// INDEPENDENT	Russians Specnaz						@sud_russians
+  case 21:
+  {
+    _Unit_Pool_S = [
+		"SUD_RU_Soldier_Crew", "SUD_RU_Soldier_HPilot", "SUD_RU_Soldier_Specnaz_TL",
+		"SUD_RU_Soldier_Specnaz",
+		"SUD_RU_Soldier_Specnaz_P",
+		"SUD_RU_Soldier_Specnaz_UAV",
+		"SUD_RU_Soldier_Specnaz_GL",
+		"SUD_RU_Soldier_Specnaz_Engineer",
+		"SUD_RU_Soldier_Specnaz_Sapper",
+		"SUD_RU_Soldier_Specnaz_Medic",
+		"SUD_RU_Soldier_Specnaz_Marksman",
+		"SUD_RU_Soldier_Specnaz_HSniper",
+		"SUD_RU_Soldier_Specnaz_Camo",
+		"SUD_RU_Soldier_Specnaz_Spotter_Camo",
+		"SUD_RU_Soldier_Specnaz_HSniper_Camo",
+		"SUD_RU_Soldier_Specnaz_UAV"
+	];
+    _Unit_Pool_V = [
+		"SUD_Kamaz_transport",
+		"SUD_Kamaz_covered"
+	];
+    _Unit_Pool_T = [
+		"RU_MBT_02_cannon_F",
+		"RU_APC_BTR100_F",
+		"RU_APC_Tracked_02_cannon_F",
+		"RU_APC_Tracked_02_AA_F"
+	];
+    _Unit_Pool_A = [
+		"SUD_KA60_RU",
+		"SUD_MI48_RU"
+	];
+  };
+//-------------------------------------------------------------------------------------------------
+// INDEPENDENT	Russians Specnaz SD					@sud_russians
+  case 22:
+  {
+    _Unit_Pool_S = [
+		"SUD_RU_Soldier_Crew", "SUD_RU_Soldier_HPilot", "SUD_RU_Soldier_Specnaz_TL_SD",
+		"SUD_RU_Soldier_Specnaz_P_SD",
+		"SUD_RU_Soldier_Specnaz_UAV_SD",
+		"SUD_RU_Soldier_Specnaz_Engineer_SD",
+		"SUD_RU_Soldier_Specnaz_Sapper_SD",
+		"SUD_RU_Soldier_Specnaz_Medic_SD",
+		"SUD_RU_Soldier_Specnaz_Marksman_SD"
+	];
+    _Unit_Pool_V = [
+		"SUD_Kamaz_transport",
+		"SUD_Kamaz_covered"
+	];
+    _Unit_Pool_T = [
+		"RU_MBT_02_cannon_F",
+		"RU_APC_BTR100_F",
+		"RU_APC_Tracked_02_cannon_F",
+		"RU_APC_Tracked_02_AA_F"
+	];
+    _Unit_Pool_A = [
+		"SUD_KA60_RU",
+		"SUD_MI48_RU"
+	];
+  };
+//-------------------------------------------------------------------------------------------------
+// INDEPENDENT	PG Services (PMC)						@POMI_PMC
+  case 23:
+  {
+    _Unit_Pool_S = [
+		"PMC_Engineer", "PMC_Helipilot", "PMC_TL",
+		"PMC_Bodyguard1",
+		"PMC_FieldSpecialist_LMG",
+		"PMC_SecurityCon_MX",
+		"PMC_SecurityCon_MXGL",
+		"PMC_Medic",
+		"PMC_Engineer",
+		"PMC_Marksman"
+	];
+    _Unit_Pool_V = [];
+    _Unit_Pool_T = [];
+    _Unit_Pool_A = ["PMC_MH9"];
+  };
 //-------------------------------------------------------------------------------------------------
   Default
   {

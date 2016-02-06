@@ -4,16 +4,22 @@ class Mission
 	addOns[]=
 	{
 		"addon",
-		"aia_zargabad_config",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
 		"dac_source",
 		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F",
-		"A3_Characters_F_BLUFOR",
-		"a3_characters_f",
+		"ace_medical",
+		"A3_Air_F_Heli_Heli_Transport_03",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Soft_F_Gamma_Offroad",
+		"a3_soft_f_offroad_01",
+		"A3_Soft_F_Truck",
 		"A3_Supplies_F_Heli_CargoNets",
-		"RHS_US_A2_AirImport",
-		"A3_Soft_F_Offroad_01"
+		"A3_Structures_F_Civ_Camping",
+		"A3_Structures_F_Items_Electronics",
+		"cup_zargabad_config"
 	};
 	addOnsAuto[]=
 	{
@@ -24,10 +30,16 @@ class Mission
 		"3DEN",
 		"a3_modules_f_curator_curator",
 		"A3_Modules_F",
-		"A3_Soft_F_Offroad_01",
+		"ace_medical",
+		"A3_Air_F_Heli_Heli_Transport_03",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Soft_F_Gamma_Offroad",
+		"a3_soft_f_offroad_01",
+		"A3_Soft_F_Truck",
 		"A3_Supplies_F_Heli_CargoNets",
-		"RHS_US_A2_AirImport",
-		"aia_zargabad_config"
+		"A3_Structures_F_Civ_Camping",
+		"A3_Structures_F_Items_Electronics",
+		"cup_zargabad_config"
 	};
 	randomSeed=12554081;
 	class Intel
@@ -54,7 +66,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=5;
+		items=10;
 		class Item0
 		{
 			side="WEST";
@@ -294,80 +306,321 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="vip_01";
-					init="comment ""Exported from Arsenal by Toaster"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_SUITS_BLK_F"";  this addItemToUniform ""rhsusf_mag_17Rnd_9x19_FMJ"";  this addGoggles ""G_Aviator"";    comment ""Add weapons"";  this addWeapon ""rhsusf_weap_glock17g4"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""WhiteHead_14"";  this setSpeaker ""Male01ENGB"";";
+					init="comment ""Exported from Arsenal by Toaster"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_SUITS_BLK_F"";  this addItemToUniform ""16Rnd_9x21_Mag"";  this addGoggles ""G_Aviator"";    comment ""Add weapons"";  this addWeapon ""hgun_P07_F"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""WhiteHead_14"";  this setSpeaker ""Male01ENGB"";";
 					description="VIP";
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4362.3311,16.951189,4157.1748};
+					azimut=-64.121101;
+					id=16;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4362.249,23.893105,4157.748};
+					type="SENTRY";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4357.5288,16.941338,4160.5757};
+					azimut=-83.298599;
+					id=17;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4357.3599,20.860106,4160.5576};
+					type="SENTRY";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item7
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4357.8853,16.980314,4157.2119};
+					azimut=-97.922798;
+					id=18;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4357.6841,23.893105,4156.9375};
+					type="SENTRY";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item8
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4363.21,16.938025,4160.731};
+					azimut=-64.121101;
+					id=19;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4363.438,16.938595,4160.3682};
+					type="SENTRY";
+					combatMode="YELLOW";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item9
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4841.561,37.738518,4589.6758};
+					class args
+					{
+						items=2;
+						class Item0
+						{
+							value="";
+							parentCls="ACE_moduleAssignMedicVehicle";
+							typeName="EnableList";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ACE_moduleAssignMedicVehicle";
+							typeName="enabled";
+						};
+					};
+					id=20;
+					side="LOGIC";
+					vehicle="ACE_moduleAssignMedicVehicle";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=0;
+					synchronizations[]={4,3,1,2};
 				};
 			};
 		};
 	};
 	class Vehicles
 	{
-		items=6;
+		items=13;
 		class Item0
 		{
 			position[]={4841.312,37.688721,4579.7026};
 			azimut=315.047;
-			id=16;
+			id=21;
 			side="EMPTY";
-			vehicle="C_Offroad_01_F";
+			vehicle="AEGIS_Offroad_Transport";
 			skill=0.60000002;
+			init="this setVariable [""BIS_enableRandomization"", false];";
 			description="Operador";
+			syncId=1;
+			synchronizations[]={0};
 		};
 		class Item1
 		{
 			position[]={4847.0693,37.984428,4573.2803};
 			azimut=329.19901;
-			id=17;
+			id=22;
 			side="EMPTY";
-			vehicle="C_Offroad_01_F";
+			vehicle="AEGIS_Offroad_Transport";
 			skill=0.60000002;
+			init="this setVariable [""BIS_enableRandomization"", false];";
 			description="Operador";
+			syncId=2;
+			synchronizations[]={0};
 		};
 		class Item2
 		{
 			position[]={4833.8569,37.881973,4582.3589};
 			azimut=631.948;
-			id=18;
+			id=23;
 			side="EMPTY";
-			vehicle="C_Offroad_01_F";
+			vehicle="AEGIS_Offroad_Transport";
 			skill=0.60000002;
+			init="this setVariable [""BIS_enableRandomization"", false];";
 			description="Operador";
+			syncId=3;
+			synchronizations[]={0};
 		};
 		class Item3
 		{
 			position[]={4825.5903,37.998074,4580.5142};
 			azimut=603.88702;
-			id=19;
+			id=24;
 			side="EMPTY";
-			vehicle="C_Offroad_01_F";
+			vehicle="AEGIS_Offroad_Transport";
 			skill=0.60000002;
+			init="this setVariable [""BIS_enableRandomization"", false];";
 			description="Operador";
+			syncId=4;
+			synchronizations[]={0};
 		};
 		class Item4
 		{
-			position[]={4846.7515,37.711971,4597.9219};
-			id=20;
-			side="EMPTY";
-			vehicle="B_CargoNet_01_ammo_F";
-			skill=0.60000002;
-			init="this allowDamage false; [""Preload""] call BIS_fnc_arsenal; this addaction [""<t color='#FF0000'>"" +""Abrir o Arsenal"",{[""Open"",true] call BIS_fnc_arsenal},nil,1,true,false,"""",""((_target distance _this <3))""];";
-			description="Operador";
-		};
-		class Item5
-		{
 			position[]={3519.2527,22.35,4158.7837};
 			azimut=326.983;
-			id=21;
+			id=25;
 			side="EMPTY";
-			vehicle="RHS_C130J";
+			vehicle="B_Heli_Transport_03_F";
 			skill=0.60000002;
 			text="plane";
 			description="Operador";
 		};
+		class Item5
+		{
+			position[]={4273.689,16.673809,4240.0698};
+			id=26;
+			side="EMPTY";
+			vehicle="Box_NATO_Ammo_F";
+			skill=0.60000002;
+			text="radios";
+			init="clearItemCargoGlobal this;  clearMagazineCargoGlobal this;  clearWeaponCargoGlobal this;  clearBackpackCargoGlobal this;    this addItemCargoGlobal [""ACRE_PRC152"",4];";
+		};
+		class Item6
+		{
+			position[]={4355.2163,16.970688,4163.5337};
+			id=27;
+			side="EMPTY";
+			vehicle="B_G_Offroad_01_F";
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={4355.1655,17.082729,4156.3647};
+			id=28;
+			side="EMPTY";
+			vehicle="B_G_Van_01_transport_F";
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={4360.8516,16.942549,4164.6274};
+			id=29;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+			init="clearItemCargoGlobal this;  clearMagazineCargoGlobal this;  clearWeaponCargoGlobal this;  clearBackpackCargoGlobal this;    this addWeaponCargoGlobal [""rhs_weap_m16a4_carryhandle_pmag"",4];  this addMagazineCargoGlobal [""rhs_mag_30Rnd_556x45_Mk318_Stanag"",16];  this addItemCargoGlobal [""LOP_V_Carrier_TAN"",4];";
+			description="Operador";
+		};
+		class Item9
+		{
+			position[]={4364.1807,16.929022,4164.6724};
+			id=30;
+			side="EMPTY";
+			vehicle="Box_NATO_Ammo_F";
+			skill=0.60000002;
+			text="radios_1";
+			init="clearItemCargoGlobal this;  clearMagazineCargoGlobal this;  clearWeaponCargoGlobal this;  clearBackpackCargoGlobal this;    this addItemCargoGlobal [""ACRE_PRC152"",4];";
+		};
+		class Item10
+		{
+			position[]={4849.46,37.640099,4599.8667};
+			offsetY=0.76010102;
+			id=31;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir 0;this setposATL [4849.459961,4599.866699,0.760101];this setVectorUp [0,0,1]";
+		};
+		class Item11
+		{
+			position[]={4842.4805,37.7024,4597.8672};
+			azimut=85.984802;
+			offsetY=0.70117998;
+			id=32;
+			side="EMPTY";
+			vehicle="Land_CampingTable_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this setdir 85.9848;this setposATL [4842.480469,4597.867188,0.70118];this setVectorUp [0,0,1]";
+		};
+		class Item12
+		{
+			position[]={4842.5757,37.703121,4597.3755};
+			azimut=69.065697;
+			offsetY=1.50842;
+			id=33;
+			side="EMPTY";
+			vehicle="Land_Laptop_unfolded_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this setdir 69.0657;this setposATL [4842.575684,4597.375488,1.50842];this setVectorUp [0,0,1]";
+		};
 	};
 	class Markers
 	{
-		items=3;
+		items=5;
 		class Item0
 		{
 			position[]={4240.0156,17,4157.7798};
@@ -386,8 +639,22 @@ class Mission
 		{
 			position[]={3523.4485,22.35,4157.0063};
 			name="extracao";
-			text=" C130 - Extração";
+			text=" Chinook - Extração";
 			type="hd_end";
+		};
+		class Item3
+		{
+			position[]={4276.854,23.247286,4235.332};
+			name="radio";
+			text=" Loja de Eletrônicos";
+			type="mil_marker";
+		};
+		class Item4
+		{
+			position[]={4361.5415,16.943905,4158.146};
+			name="delegacia";
+			text=" Delegacia";
+			type="mil_marker";
 		};
 	};
 	class Sensors
@@ -406,7 +673,7 @@ class Mission
 			text="Area de Zargabad";
 			name="z1";
 			expCond="time > 1";
-			expActiv="fun = [""z1"",[1,0,0],[(ceil (random 15)+10),3,20,6],[(ceil (random 5)+5),2,30,5],[],[4,5,50,0,100,10],[2,2,2,9,1]] spawn DAC_Zone";
+			expActiv="fun = [""z1"",[1,0,0],[(ceil (random 15)+10),3,20,6],[(ceil (random 5)+5),2,30,5],[],[4,5,50,0,100,10],[0,10,0,9,1]] spawn DAC_Zone";
 			class Effects
 			{
 			};
@@ -417,11 +684,12 @@ class Intro
 {
 	addOns[]=
 	{
-		"aia_zargabad_config"
+		"aia_zargabad_config",
+		"cup_zargabad_config"
 	};
 	addOnsAuto[]=
 	{
-		"aia_zargabad_config"
+		"cup_zargabad_config"
 	};
 	randomSeed=16122389;
 	class Intel
@@ -445,11 +713,12 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"aia_zargabad_config"
+		"aia_zargabad_config",
+		"cup_zargabad_config"
 	};
 	addOnsAuto[]=
 	{
-		"aia_zargabad_config"
+		"cup_zargabad_config"
 	};
 	randomSeed=3609184;
 	class Intel
@@ -473,11 +742,12 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"aia_zargabad_config"
+		"aia_zargabad_config",
+		"cup_zargabad_config"
 	};
 	addOnsAuto[]=
 	{
-		"aia_zargabad_config"
+		"cup_zargabad_config"
 	};
 	randomSeed=1164885;
 	class Intel

@@ -572,7 +572,6 @@ class Mission
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
-			init="clearItemCargoGlobal this;  clearMagazineCargoGlobal this;  clearWeaponCargoGlobal this;  clearBackpackCargoGlobal this;    this addWeaponCargoGlobal [""rhs_weap_m16a4_carryhandle_pmag"",4];  this addMagazineCargoGlobal [""rhs_mag_30Rnd_556x45_Mk318_Stanag"",16];  this addItemCargoGlobal [""LOP_V_Carrier_TAN"",4];";
 			description="Operador";
 		};
 		class Item9

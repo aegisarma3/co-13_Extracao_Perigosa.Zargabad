@@ -66,7 +66,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			side="WEST";
@@ -240,7 +240,7 @@ class Mission
 						items=4;
 						class Item0
 						{
-							value="#adminLogged";
+							value="76561197971953734";
 							parentCls="ModuleCurator_F";
 							typeName="Owner";
 						};
@@ -450,7 +450,7 @@ class Mission
 						items=2;
 						class Item0
 						{
-							value="";
+							value="v1,v2,v3,v4";
 							parentCls="ACE_moduleAssignMedicVehicle";
 							typeName="EnableList";
 						};
@@ -472,6 +472,52 @@ class Mission
 				};
 			};
 		};
+		class Item10
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4831.1978,37.961849,4588.876};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="#adminLogged";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="2";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=21;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -480,10 +526,11 @@ class Mission
 		{
 			position[]={4841.312,37.688721,4579.7026};
 			azimut=315.047;
-			id=21;
+			id=22;
 			side="EMPTY";
 			vehicle="AEGIS_Offroad_Transport";
 			skill=0.60000002;
+			text="v3";
 			init="this setVariable [""BIS_enableRandomization"", false];";
 			description="Operador";
 			syncId=1;
@@ -493,10 +540,11 @@ class Mission
 		{
 			position[]={4847.0693,37.984428,4573.2803};
 			azimut=329.19901;
-			id=22;
+			id=23;
 			side="EMPTY";
 			vehicle="AEGIS_Offroad_Transport";
 			skill=0.60000002;
+			text="v4";
 			init="this setVariable [""BIS_enableRandomization"", false];";
 			description="Operador";
 			syncId=2;
@@ -506,10 +554,11 @@ class Mission
 		{
 			position[]={4833.8569,37.881973,4582.3589};
 			azimut=631.948;
-			id=23;
+			id=24;
 			side="EMPTY";
 			vehicle="AEGIS_Offroad_Transport";
 			skill=0.60000002;
+			text="v2";
 			init="this setVariable [""BIS_enableRandomization"", false];";
 			description="Operador";
 			syncId=3;
@@ -519,10 +568,11 @@ class Mission
 		{
 			position[]={4825.5903,37.998074,4580.5142};
 			azimut=603.88702;
-			id=24;
+			id=25;
 			side="EMPTY";
 			vehicle="AEGIS_Offroad_Transport";
 			skill=0.60000002;
+			text="v1";
 			init="this setVariable [""BIS_enableRandomization"", false];";
 			description="Operador";
 			syncId=4;
@@ -532,7 +582,7 @@ class Mission
 		{
 			position[]={3519.2527,22.35,4158.7837};
 			azimut=326.983;
-			id=25;
+			id=26;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_03_F";
 			skill=0.60000002;
@@ -542,7 +592,7 @@ class Mission
 		class Item5
 		{
 			position[]={4273.689,16.673809,4240.0698};
-			id=26;
+			id=27;
 			side="EMPTY";
 			vehicle="Box_NATO_Ammo_F";
 			skill=0.60000002;
@@ -552,7 +602,7 @@ class Mission
 		class Item6
 		{
 			position[]={4355.2163,16.970688,4163.5337};
-			id=27;
+			id=28;
 			side="EMPTY";
 			vehicle="B_G_Offroad_01_F";
 			skill=0.60000002;
@@ -560,7 +610,7 @@ class Mission
 		class Item7
 		{
 			position[]={4355.1655,17.082729,4156.3647};
-			id=28;
+			id=29;
 			side="EMPTY";
 			vehicle="B_G_Van_01_transport_F";
 			skill=0.60000002;
@@ -568,7 +618,7 @@ class Mission
 		class Item8
 		{
 			position[]={4360.8516,16.942549,4164.6274};
-			id=29;
+			id=30;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -577,7 +627,7 @@ class Mission
 		class Item9
 		{
 			position[]={4364.1807,16.929022,4164.6724};
-			id=30;
+			id=31;
 			side="EMPTY";
 			vehicle="Box_NATO_Ammo_F";
 			skill=0.60000002;
@@ -588,7 +638,7 @@ class Mission
 		{
 			position[]={4849.46,37.640099,4599.8667};
 			offsetY=0.76010102;
-			id=31;
+			id=32;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -599,7 +649,7 @@ class Mission
 			position[]={4842.4805,37.7024,4597.8672};
 			azimut=85.984802;
 			offsetY=0.70117998;
-			id=32;
+			id=33;
 			side="EMPTY";
 			vehicle="Land_CampingTable_F";
 			skill=0.60000002;
@@ -610,7 +660,7 @@ class Mission
 			position[]={4842.5757,37.703121,4597.3755};
 			azimut=69.065697;
 			offsetY=1.50842;
-			id=33;
+			id=34;
 			side="EMPTY";
 			vehicle="Land_Laptop_unfolded_F";
 			skill=0.60000002;
@@ -672,7 +722,7 @@ class Mission
 			text="Area de Zargabad";
 			name="z1";
 			expCond="time > 1";
-			expActiv="fun = [""z1"",[1,0,0],[(ceil (random 15)+10),3,20,6],[(ceil (random 5)+5),2,30,5],[],[4,5,50,0,100,10],[0,10,0,9,1]] spawn DAC_Zone";
+			expActiv="fun = [""z1"",[1,0,0],[10,3,20,6],[(ceil (random 5)+5),2,30,5],[],[4,5,50,0,100,10],[0,10,0,9,1]] spawn DAC_Zone";
 			class Effects
 			{
 			};

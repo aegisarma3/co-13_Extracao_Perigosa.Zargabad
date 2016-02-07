@@ -18,7 +18,7 @@ VIP = vip_01;
 
 0 = [] Spawn{
 	waituntil { sleep 2; !(alive vip_01) };
-	["vip_kill",false,2] call BIS_fnc_endMission;
+	["vip_kill",false,2] remoteExecCall ["BIS_fnc_endMission"];
 };
 
 
@@ -27,4 +27,4 @@ waituntil {
 	((VIP distance plane) < 10)
 };
 
-"end1" call BIS_fnc_endMission;
+"end1" remoteExecCall ["BIS_fnc_endMission"];
